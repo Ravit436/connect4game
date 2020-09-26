@@ -67,7 +67,7 @@ function resetGameValues() {
 
 function checkIfColumnIsFilled(column) {
     const row = global.currentColumnRow[column];
-    if(row == constants.rows - 1) {
+    if(row == constants.rows - 1 || row === undefined) {
         return true;
     }
 }
