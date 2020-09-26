@@ -16,7 +16,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json({limit: '100mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
-app.post('/conect4/action', checkParams.isPerformActionValid, action.performAction);
+app.post('/connect4/action', checkParams.isPerformActionValid, action.performAction);
 
 
 var httpServer = http.createServer(app).listen(app.get('port'), () => {
