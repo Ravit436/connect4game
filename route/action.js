@@ -155,10 +155,10 @@ function checkIfDiagonalWinner(column, coinValue) {
     }
 
     columnCount = 1;
-    
+
     // * check for right diagonal above
-    let leftColumn = column + 1;
-    let leftRow = row - 1;
+    leftColumn = column + 1;
+    leftRow = row - 1;
     while(leftColumn < constants.columns && leftRow >= 0 && global.connect4Matrix[leftRow][leftColumn] == coinValue) {
         columnCount++;
         leftRow--;
@@ -166,8 +166,8 @@ function checkIfDiagonalWinner(column, coinValue) {
     }
 
     // * check for right diagonal below
-    let rightColumn = column - 1;
-    let rightRow = row + 1;
+    rightColumn = column - 1;
+    rightRow = row + 1;
     while(rightColumn >= 0 && rightRow < constants.rows && global.connect4Matrix[rightRow][rightColumn] == coinValue) {
         columnCount++;
         rightColumn--;
