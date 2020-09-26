@@ -11,7 +11,7 @@ const checkParams       = require('./route/checkParams');
 process.env.NODE_CONFIG_DIR = path.join(__dirname, 'config');
 config = require('config');
 
-app.set('port', config.get('port'));
+app.set('port', process.env.PORT || config.get('port'));
 app.use(morgan('dev'));
 app.use(bodyParser.json({limit: '100mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
